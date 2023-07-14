@@ -1,0 +1,26 @@
+server:
+  port: 8089
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    prefer-ip-address: true
+
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      routes:
+        - id: client-service
+          uri: lb://client-service
+          predicates:
+            - Path=/api/client/**
+          filters:
+           - name: RequestHeader
+             args:
+              headerName: spring-cloud-course
+           - RemoveRequestHeader=spring-cloud-course
+
