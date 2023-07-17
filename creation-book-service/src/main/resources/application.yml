@@ -6,5 +6,5 @@ spring:
           auto-add-partitions: true
       bindings:
         output:
-          destination: destination
+          destination: creation-book
           group: group

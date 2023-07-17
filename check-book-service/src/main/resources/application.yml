@@ -4,10 +4,10 @@ stream:
       auto-add-partitions: true
   bindings:
     input:
-      destination: destination
+      destination: creation-book
       group: group
       binder: kafka
     output:
-      destination: destination
+      destination: check-book
       group: group
       binder: kafka

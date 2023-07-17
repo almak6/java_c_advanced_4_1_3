@@ -6,6 +6,6 @@ spring:
           auto-add-partitions: true
       bindings:
         input:
-          destination: destination
+          destination: check-book
           group: group
           binder: kafka
