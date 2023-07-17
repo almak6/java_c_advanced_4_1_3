@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          auto-add-partitions: true
+      bindings:
+        output:
+          destination: destination
+          group: group

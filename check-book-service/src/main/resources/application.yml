@@ -1,0 +1,13 @@
+stream:
+  kafka:
+    binder:
+      auto-add-partitions: true
+  bindings:
+    input:
+      destination: destination
+      group: group
+      binder: kafka
+    output:
+      destination: destination
+      group: group
+      binder: kafka
