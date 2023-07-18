@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          auto-add-partitions: true
+      bindings:
+        bookSubscribing:
+          destination: check-book
+          group: group
+          binder: kafka

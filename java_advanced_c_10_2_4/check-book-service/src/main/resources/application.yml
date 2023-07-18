@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          auto-add-partitions: true
+      bindings:
+        bookProcessing-in-0:
+          destination: creation-book
+          group: group
+          binder: kafka
+        bookProcessing-out-0:
+          destination: check-book
+          group: group
+          binder: kafka

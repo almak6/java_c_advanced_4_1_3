@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    stream:
+      poller:
+        fixed-delay: 10000
+      kafka:
+        binder:
+          auto-add-partitions: true
+      bindings:
+        bookPublishing-out-0:
+          destination: creation-book
+          group: group
